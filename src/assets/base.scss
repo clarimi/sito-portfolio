@@ -41,14 +41,16 @@ body {
   display: flex;
   justify-content: left;
   align-items: left;
-  font-weight: 600;
-  font-size: 1.5em;
   text-align: left;
   box-sizing: border-box;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   position: absolute;
   will-change: transform;
+
+  h1 {
+    font-weight: bold;
+  }
 }
 
 .panel-content {
@@ -203,17 +205,16 @@ body {
   }
 }
 
-#third-panel {
+#projects-panel {
   z-index: 3;
+}
+
+#design-cit-panel {
+  z-index: 2;
   background-color: white;
 }
 
-#fourth-panel {
-  z-index: 2;
-  background-color: black;
-}
-
-#fifth-panel {
+#final-panel {
   z-index: 1;
   background-color: black;
   color: white;
@@ -381,7 +382,17 @@ header {
 .bodoni-italic {
   font-family: var(--bodoni-font-family);
   font-style: italic;
-  font-weight: bolds;
+  font-weight: bold;
+}
+
+.bodoni {
+  font-family: var(--bodoni-font-family);
+  font-weight: bold;
+}
+
+.bodoni-extrabold {
+  font-family: var(--bodoni-font-family);
+  font-weight: 800;
 }
 .skill-list-container {
   width: 90vw;
@@ -404,5 +415,75 @@ header {
   h1 {
     font-size: 100px;
     color: black;
+  }
+}
+
+.projects-list {
+  display: flex;
+  gap: 64px;
+}
+
+#projects-panel {
+  background-color: black;
+}
+#projects-panel .panel-content {
+  flex-direction: column;
+  font-family: var(--base-font-family);
+
+  h1 {
+    font-size: 100px;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+  }
+  .project {
+    padding: 48px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+
+    img {
+      max-width: 300px;
+    }
+  }
+
+  .projects-list {
+    position: relative;
+    top: 40px;
+    z-index: 5;
+  }
+  h2 {
+    font-size: 32px;
+  }
+
+  .project-tags {
+    display: flex;
+    font-size: 14px;
+    gap: 8px;
+    div {
+      border: 1px solid white;
+      padding: 12px 18px;
+      border-radius: 40px;
+    }
+  }
+}
+
+#design-cit-panel {
+  color: #000;
+}
+
+#design-cit-panel .panel-content {
+  flex-direction: column;
+  h1 {
+    font-size: 80px;
+    font-weight: 200;
+    font-family: var(--base-font-family);
+    max-width: 85vw;
+  }
+  p {
+    max-width: 70vw;
+    font-size: 16px;
+    line-height: 24px;
   }
 }

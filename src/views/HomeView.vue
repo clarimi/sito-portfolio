@@ -153,17 +153,54 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
           </div>
         </div>
       </section>
-      <section class="panel" id="third-panel">
+      <section class="panel" id="projects-panel">
         <div class="panel-content">
-          Pannello 3
+          <h1>Projects <span class="bodoni-italic">Projects</span> Projects</h1>
+          <div class="projects-list">
+            <div class="project">
+              <img src="./../assets/immagini-progetti/lustro.png" />
+              <h3>Astrology App</h3>
+              <div class="project-tags">
+                <div>UI | UX design</div>
+                <div>Pippo</div>
+                <div>Pluto</div>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./../assets/immagini-progetti/lustro.png" />
+              <h3>Astrology App</h3>
+              <div class="project-tags">
+                <div>UI | UX design</div>
+                <div>Pippo</div>
+                <div>Pluto</div>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./../assets/immagini-progetti/lustro.png" />
+              <h3>Astrology App</h3>
+              <div class="project-tags">
+                <div>UI | UX design</div>
+                <div>Pippo</div>
+                <div>Pluto</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="panel" id="fourth-panel">
+      <section class="panel" id="design-cit-panel">
         <div class="panel-content">
-          Pannello 4
+          <h1><span class="bodoni">Design</span> won’t save the world
+            but makes it look good, <span class="bodoni">maybe</span></h1>
+          <p>My biggest belief is / achievement for the future is.... purus sit amet luctus venenatis, lectus magna
+            fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est
+            ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus
+            in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa vitae tortor
+            condimentum lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue
+            lacus, viverra vitae congue eu, consequat ac felis donec et odio pellentesque diam volutpat commodo sed
+            egestas egestas fringilla phasellus faucibus</p>
         </div>
       </section>
-      <section class="panel" id="fifth-panel">
+      <section class="panel" id="final-panel">
         <div class="panel-content">
           <div class="contact-container">
 

@@ -65,7 +65,7 @@ body {
   color: #000;
 }
 
-#first-panel {
+#copertina-panel {
   background-color: black;
   z-index: 10;
   opacity: 1;
@@ -76,17 +76,72 @@ body {
   margin-left: 100px;
 }
 
-#second-panel {
-  background-color: rgba(203, 230, 73, 1);
-  color: black;
-  width: 220vw;
+#descrizione-panel {
   z-index: 9;
+  background-color: white;
+  color: black;
+}
+
+.panel-falso {
+  z-index: 2;
+}
+
+#skill-panel,
+#software-panel {
+  background-color: rgba(255, 168, 0, 1);
+  color: black;
+  width: 110vw;
+  z-index: 8;
+
+  .panel-content {
+    align-items: flex-start;
+  }
 
   h1 {
     font-size: 100px;
     font-family: "Bodoni Moda", "Bodoni", serif;
     margin-bottom: 40px;
   }
+}
+
+#software-panel {
+  z-index: 7;
+}
+
+.hard {
+  font-family: "Bodoni Moda", "Bodoni", serif;
+  font-style: italic;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.skills {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+.and {
+  font-family: "Inter";
+  font-weight: 200;
+  font-size: 40px;
+}
+
+.soft {
+  font-family: "Bodoni Moda", "Bodoni", serif;
+  font-style: italic;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.ware {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 90px;
+}
+
+.skill-software-list {
+  display: flex;
+  gap: 300px;
 }
 
 .skill-list {
@@ -96,8 +151,8 @@ body {
 
   h2 {
     font-family: var(--base-font-family);
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 16px;
     margin: 0;
   }
 
@@ -109,21 +164,138 @@ body {
   }
 }
 
+.software-list {
+  list-style: none;
+  font-size: 18px;
+  font-family: var(--base-font-family);
+  font-weight: 500;
+  li {
+    display: flex;
+    gap: 64px;
+    margin-bottom: 56px;
+    .software {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    img {
+      max-height: 44px;
+    }
+  }
+}
+
 #third-panel {
-  z-index: 7;
+  z-index: 3;
   background-color: white;
 }
 
 #fourth-panel {
-  z-index: 6;
+  z-index: 2;
   background-color: black;
 }
 
 #fifth-panel {
-  z-index: 5;
-  background-color: white;
-  color: black;
+  z-index: 1;
+  background-color: black;
+  color: white;
   border-radius: 0;
+}
+
+.line-one {
+  justify-content: center;
+  display: flex;
+  height: 160px;
+}
+
+.letsmake {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 88px;
+}
+
+.something {
+  font-family: "Bodoni Moda", "Bodoni", serif;
+  font-style: italic;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 95px;
+}
+
+.great {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 88px;
+}
+
+.line-two {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 32px;
+  height: 160px;
+}
+
+a.button-collabora {
+  display: inline-block;
+  position: relative;
+  background-color: black;
+  color: white;
+  font-family: "Inter";
+  font-weight: 300;
+  font-size: 14px;
+  border: 1px solid white;
+  padding: 12px 48px 14px 48px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.4s;
+  text-decoration: none;
+}
+
+.button-collabora:hover {
+  box-shadow: inset 400px 0 0 0 white;
+  color: black;
+}
+
+.mail {
+  font-family: "Bodoni Moda", "Bodoni", serif;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ff9a00;
+
+  line-height: 2px;
+  font-size: 70px;
+  color: #ff9a00;
+}
+
+.line-three {
+  justify-content: center;
+  display: flex;
+  height: 160px;
+  margin-bottom: 100px;
+  gap: 80px;
+}
+
+.for-line-collaborations {
+  margin: 0px;
+}
+
+.for {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 88px;
+}
+
+.collaborations {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 88px;
+}
+
+#contacts-img {
+  max-width: 1460px;
+  margin-bottom: -200px;
 }
 
 #hero-logo {
@@ -179,10 +351,37 @@ header {
   }
 }
 
-#pointedr {
+#pointer {
   position: fixed;
   width: 30px;
   height: 30px;
   mix-blend-mode: difference;
   will-change: top;
+}
+
+.bodoni-italic {
+  font-family: var(--bodoni-font-family);
+}
+.skill-list-container {
+  width: 90vw;
+}
+.titolo-hard-skills-falso {
+  position: fixed;
+  z-index: 7;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  div {
+    position: relative;
+    left: 72px;
+    top: 16px;
+  }
+  .skill-software-list {
+    opacity: 0;
+  }
+  h1 {
+    font-size: 100px;
+    color: black;
+  }
 }

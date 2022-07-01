@@ -80,6 +80,25 @@ body {
   z-index: 9;
   background-color: white;
   color: black;
+  img {
+    position: relative;
+    top: 100px;
+    width: 400px;
+  }
+  h1 {
+    font-family: var(--base-font-family);
+    font-size: 100px;
+    position: relative;
+    left: -100px;
+    margin-top: 0;
+  }
+  p {
+    font-family: var(--base-font-family);
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 768px;
+    line-height: 24px;
+  }
 }
 
 .panel-falso {
@@ -361,6 +380,8 @@ header {
 
 .bodoni-italic {
   font-family: var(--bodoni-font-family);
+  font-style: italic;
+  font-weight: bolds;
 }
 .skill-list-container {
   width: 90vw;

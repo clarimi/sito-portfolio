@@ -37,14 +37,19 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
       <div class="panel" id="descrizione-panel">
         <div class="panel-content">
           <img id="person" src="./../assets/person.png" />
-          <h1>A few words about me</h1>
-          <p>Hi I’m Clarice e mo ti becchi sto pezzo di paragrafo di minchiate about me, consectetur adipiscing elit ut
-            aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non
-            enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim
-            diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu volutpat
-            odio facilisis mauris sit amet massa vitae tortor condimentum lacinia quis vel eros donec ac odio tempor
-            orci dapibus ultrices in iaculis nunc sed augue lacus, viverra vitae congue eu, consequat ac felis donec et
-            odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus</p>
+          <div>
+            <h1>A few words <span class="bodoni-italic">about me</span></h1>
+            <p>Hi I’m Clarice e mo ti becchi sto pezzo di paragrafo di minchiate about me, consectetur adipiscing elit
+              ut
+              aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non
+              enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim
+              diam quis enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci sagittis eu
+              volutpat
+              odio facilisis mauris sit amet massa vitae tortor condimentum lacinia quis vel eros donec ac odio tempor
+              orci dapibus ultrices in iaculis nunc sed augue lacus, viverra vitae congue eu, consequat ac felis donec
+              et
+              odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus</p>
+          </div>
         </div>
       </div>
       <section class="panel panel-falso">
@@ -314,7 +319,7 @@ export default {
         start: "right 48%",
         end: "right 45%",
         scrub: true,
-        markers: true,
+        // markers: true,
         toggleActions: "play none reverse reset",
         id: "title-nascondi-1",
       }

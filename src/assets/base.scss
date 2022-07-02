@@ -83,7 +83,7 @@ body {
 
 .skill-list {
   font-size: 15px;
-  margin-left: 100px;
+  margin-left: -100px;
 }
 
 #descrizione-panel {
@@ -92,7 +92,7 @@ body {
   color: black;
   img {
     position: relative;
-    top: 100px;
+    top: 120px;
     width: 400px;
   }
   h1 {
@@ -115,21 +115,26 @@ body {
   z-index: 2;
 }
 
-#skill-panel,
-#software-panel {
+#skill-panel {
   background-color: rgba(255, 168, 0, 1);
   color: black;
   width: 110vw;
   z-index: 8;
+  overflow: hidden;
 
   .panel-content {
+    width: 200vw;
     align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 300px;
   }
 
   h1 {
     font-size: 100px;
     font-family: "Bodoni Moda", "Bodoni", serif;
     margin-bottom: 40px;
+    position: relative;
+    left: -150px;
   }
 }
 
@@ -172,7 +177,7 @@ body {
 
 .skill-software-list {
   display: flex;
-  gap: 300px;
+  gap: 0px;
 }
 
 .skill-list {
@@ -263,6 +268,7 @@ body {
   font-size: 18px;
   font-family: var(--base-font-family);
   font-weight: 500;
+  margin-left: 320px;
   li {
     display: flex;
     gap: 64px;
@@ -475,16 +481,11 @@ header {
   line-height: 85px;
 }
 
-.cit-paragraph {
-}
-
 .bodoni-extrabold {
   font-family: var(--bodoni-font-family);
   font-weight: 800;
 }
-.skill-list-container {
-  width: 90vw;
-}
+
 .titolo-hard-skills-falso {
   display: none !important;
   position: fixed;
@@ -532,6 +533,7 @@ header {
 
 #projects-panel {
   background-color: black;
+  overflow: hidden;
 }
 
 .project-2 {
@@ -583,6 +585,7 @@ header {
   .projects-list {
     position: relative;
     top: 105px;
+    left: 300px;
     z-index: 5;
     display: flex;
     height: 80vh;
@@ -781,4 +784,8 @@ header {
       font-family: var(--base-font-family);
     }
   }
+}
+
+.skill-list-container {
+  min-width: 160vw;
 }

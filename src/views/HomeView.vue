@@ -15,18 +15,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
         <a><span>Contact</span></a>
       </div>
     </header>
-
-    <div class="titolo-hard-skills-falso">
-      <div>
-        <h1>
-          <span class="hard">Hard</span>
-          <span class="skills">Skills&nbsp;</span>
-          <span class="and">and&nbsp;</span>
-          <span class="soft">&nbsp;Soft</span>
-          <span class="ware">ware</span>
-        </h1>
-      </div>
-    </div>
     <div class="container">
       <div class="panel" id="copertina-panel">
         <div class="panel-content">
@@ -53,7 +41,12 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
           </div>
         </div>
       </div>
-      <section class="panel panel-falso">
+      <section class="panel panel-falso" id="pannello-falso-1">
+        <div class="panel-content">
+          Pannello falzo
+        </div>
+      </section>
+      <section class="panel panel-falso" id="pannello-falso-2">
         <div class="panel-content">
           Pannello falzo
         </div>
@@ -97,21 +90,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
                   </p>
                 </li>
               </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="panel" id="software-panel">
-        <div class="panel-content">
-          <div class="skill-list-container">
-            <h1>
-              <span class="hard">Hard</span>
-              <span class="skills">Skills&nbsp;</span>
-              <span class="and">and&nbsp;</span>
-              <span class="soft">&nbsp;Soft</span>
-              <span class="ware">ware</span>
-            </h1>
-            <div class="skill-software-list">
               <ol class="software-list">
                 <li>
                   <div class="software">
@@ -146,7 +124,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
                     <img src="./../assets/icone-software/after.png" />After effects
                   </div>
                 </li>
-                <li style="opacity: 0; height: ">
+                <li>
                   <div class="software">
                     <img src="./../assets/icone-software/after.png" />After effects
                   </div>
@@ -157,13 +135,18 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
                     <img src="./../assets/icone-software/after.png" />After effects
                   </div>
                 </li>
-
-
               </ol>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="panel panel-falso" id="pannello-falso-progetti">
+        <div class="panel-content">
+          Pannello falzo
+        </div>
+      </section>
+
       <section class="panel" id="projects-panel">
         <div class="panel-content">
           <h1> <span class="project-1">Projects</span> <span class="project-2">Projects</span> <span
@@ -178,6 +161,24 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
                 <div>Pluto</div>
               </div>
               <router-link :to="'/progetto/lustro'">Vai al progetto</router-link>
+            </div>
+            <div class="project">
+              <img src="./../assets/immagini-progetti/lustro.png" />
+              <h3 class="project-title">Astrology App</h3>
+              <div class="project-tags">
+                <div>UI | UX design</div>
+                <div>Pippo</div>
+                <div>Pluto</div>
+              </div>
+            </div>
+            <div class="project">
+              <img src="./../assets/immagini-progetti/lustro.png" />
+              <h3 class="project-title">Astrology App</h3>
+              <div class="project-tags">
+                <div>UI | UX design</div>
+                <div>Pippo</div>
+                <div>Pluto</div>
+              </div>
             </div>
             <div class="project">
               <img src="./../assets/immagini-progetti/lustro.png" />
@@ -286,81 +287,84 @@ export default {
 
     const liItems = 4;
 
+    // Animazione dell'elenco delle skills
     for (var i = 0; i < liItems; i++) {
-      gsap.from(`#skill-panel ol > li:nth-child(${i + 1})`, {
+      gsap.from(`#skill-panel ol.skill-list > li:nth-child(${i + 1})`, {
         x: 800 + (400 * i),
         scrollTrigger: {
           trigger: "#descrizione-panel",
           containerAnimation: this.scrollTween,
-          start: "right 82%",
-          end: "center 10%",
+          start: "right 90%",
+          end: "center 18%",
           scrub: true,
-          markers: true,
+          //markers: true,
           toggleActions: "play none revert reset",
           id: "skill-1",
         }
       });
     }
 
-
-    for (var i = 0; i < 3; i++) {
-      gsap.from(`#software-panel ol > li:nth-child(${i + 1})`, {
-        x: 1500 + (400 * i),
+    // Animazione dell'elenco dei software
+    for (var i = 0; i < 4; i++) {
+      gsap.from(`#skill-panel ol.software-list > li:nth-child(${i + 1})`, {
+        x: 600 + (200 * i),
         scrollTrigger: {
-          trigger: "#skill-panel",
+          trigger: "#pannello-falso-2",
           containerAnimation: this.scrollTween,
           start: "right 60%",
-          end: "right center",
+          end: "right 52%",
           scrub: true,
-          markers: true,
+          // markers: true,
           toggleActions: "play none revert reset",
           id: "sw-1",
         }
       });
     }
 
-    gsap.to("#skill-panel h1", {
-      opacity: 0,
+    // Animazione che fa passare dall'elenco delle skill a quella dei software
+    gsap.to(".skill-software-list", {
+      x: -1500,
       scrollTrigger: {
-        trigger: "#skill-panel",
+        trigger: "#pannello-falso-2",
         containerAnimation: this.scrollTween,
-        start: "right 68%",
-        end: "right 65%",
+        start: "right 70%",
+        end: "right 58%",
         scrub: true,
         // markers: true,
-        toggleActions: "play none none reset",
-        id: "title-1",
-      }
-    });
-    gsap.set(".titolo-hard-skills-falso", { opacity: 0 });
-
-    gsap.to(".titolo-hard-skills-falso", {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: "#skill-panel",
-        containerAnimation: this.scrollTween,
-        start: "right 68%",
-        end: "right 67%",
-        scrub: true,
-        // markers: true,
-        toggleActions: "play none reverse reset",
-        id: "title-1",
+        toggleActions: "play none revert reset",
+        id: "sw-1",
       }
     });
 
-    gsap.to(".titolo-hard-skills-falso", {
-      opacity: 0,
+    gsap.from(".software-list", {
+      x: -400,
       scrollTrigger: {
-        trigger: "#skill-panel",
+        trigger: "#pannello-falso-2",
         containerAnimation: this.scrollTween,
-        start: "right 48%",
-        end: "right 45%",
+        start: "right 67%",
+        end: "right 55%",
         scrub: true,
         // markers: true,
-        toggleActions: "play none reverse reset",
-        id: "title-nascondi-1",
+        toggleActions: "play none revert reset",
+        id: "sw-1",
       }
     });
+
+
+    gsap.to(".projects-list", {
+      x: -1600,
+      scrollTrigger: {
+        trigger: "#pannello-falso-progetti",
+        containerAnimation: this.scrollTween,
+        start: "right 35%",
+        end: "right 2%",
+        scrub: true,
+        // markers: true,
+        toggleActions: "play none revert reset",
+        id: "progetti",
+      }
+    });
+
 
     setTimeout(function () {
       self.scrollTween.scrollTrigger.refresh()

@@ -35,11 +35,19 @@ body {
   overflow: hidden;
 }
 
+#hero-scroll-text {
+  font-family: "Inter";
+  font-weight: 100;
+  font-size: 20px;
+}
+
 .panel {
   width: calc(100vw + 50px);
   height: 100vh;
   display: flex;
   justify-content: left;
+  font-weight: 600;
+  font-size: 1.5em;
   align-items: left;
   text-align: left;
   box-sizing: border-box;
@@ -132,6 +140,7 @@ body {
 .hard {
   font-family: "Bodoni Moda", "Bodoni", serif;
   font-style: italic;
+  font-weight: 500;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
@@ -150,6 +159,7 @@ body {
 .soft {
   font-family: "Bodoni Moda", "Bodoni", serif;
   font-style: italic;
+  font-weight: 500;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
@@ -178,11 +188,74 @@ body {
   }
 
   p {
-    font-family: var(--bodoni-font-family);
-    font-size: 25px;
-    font-weight: 400;
+    font-family: "Inter";
+    font-size: 24px;
+    font-weight: 200;
     margin: 0;
   }
+}
+
+.social-mm {
+  font-family: "Bodoni Moda", serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.content-c {
+  font-style: italic;
+}
+
+.google-a {
+  font-family: "Bodoni Moda", serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.art-d {
+  font-family: "Bodoni Moda", serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.illustration {
+  font-style: italic;
+}
+
+.motion {
+  font-family: "Bodoni Moda", serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.sound {
+  font-family: "Bodoni Moda", serif;
+  font-size: 27px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.js {
+  font-family: "Bodoni Moda", serif;
+  font-size: 27px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.wp {
+  font-style: italic;
+}
+
+.gatsby {
+  font-family: "Bodoni Moda", serif;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.vue {
+  font-family: "Bodoni Moda", serif;
+  font-size: 27px;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .software-list {
@@ -377,6 +450,7 @@ header {
   height: 30px;
   mix-blend-mode: difference;
   will-change: top;
+  pointer-events: none;
 }
 
 .bodoni-italic {
@@ -388,6 +462,20 @@ header {
 .bodoni {
   font-family: var(--bodoni-font-family);
   font-weight: bold;
+  font-size: 90px;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.wont-save {
+  font-family: "Inter";
+  font-weight: 100 !important;
+  font-size: 80px !important;
+  line-height: 85px;
+}
+
+.cit-paragraph {
 }
 
 .bodoni-extrabold {
@@ -398,6 +486,7 @@ header {
   width: 90vw;
 }
 .titolo-hard-skills-falso {
+  display: none !important;
   position: fixed;
   z-index: 7;
   height: 100vh;
@@ -418,14 +507,57 @@ header {
   }
 }
 
-.projects-list {
-  display: flex;
-  gap: 64px;
+.few-words {
+  font-family: "Inter";
+  font-weight: 100 !important;
+  font-size: 80px !important;
+}
+
+.about-me {
+  font-family: "Bodoni Moda", "Bodoni", serif;
+  font-style: italic;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 90px;
+}
+
+.presentation-paragraph {
+  font-weight: 100 !important;
+}
+
+.cit-paragraph {
+  font-weight: 100 !important;
 }
 
 #projects-panel {
   background-color: black;
 }
+
+.project-2 {
+  font-family: "Bodoni Moda", "Bodoni", serif;
+  font-style: italic;
+  color: white;
+  font-size: 105px;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.project-1 {
+  color: white;
+  font-family: "Inter";
+  font-size: 100px !important;
+  font-weight: 300;
+}
+
+.project-3 {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 100px;
+}
+
 #projects-panel .panel-content {
   flex-direction: column;
   font-family: var(--base-font-family);
@@ -444,14 +576,18 @@ header {
     backdrop-filter: blur(6px);
 
     img {
-      max-width: 300px;
+      max-width: 240px;
     }
   }
 
   .projects-list {
     position: relative;
-    top: 40px;
+    top: 105px;
     z-index: 5;
+    display: flex;
+    height: 80vh;
+    align-items: stretch;
+    gap: 16px;
   }
   h2 {
     font-size: 32px;
@@ -459,14 +595,23 @@ header {
 
   .project-tags {
     display: flex;
-    font-size: 14px;
+    font-family: var(--base-font-family);
+    font-size: 12px;
+    font-weight: 100;
     gap: 8px;
     div {
       border: 1px solid white;
-      padding: 12px 18px;
+      padding: 12px 12px 12px 12px;
       border-radius: 40px;
     }
   }
+}
+
+.project-title {
+  font-size: 32px;
+  font-family: var(--base-font-family);
+  font-weight: 100;
+  text-align: center;
 }
 
 #design-cit-panel {
@@ -485,5 +630,155 @@ header {
     max-width: 70vw;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.project-page {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.project-hero {
+  background-color: black;
+  position: relative;
+  min-height: 120vh;
+  margin-bottom: 100px;
+}
+
+#project-logo {
+  max-width: 80px;
+}
+
+.project-title-container {
+  max-width: 350px;
+  position: absolute;
+  top: 80px;
+  left: 8vw;
+  display: flex;
+  align-items: flex-start;
+}
+
+#project-title {
+  max-width: 320px;
+}
+
+.project-overview {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 200px;
+}
+
+.project-intro {
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 180px;
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: 100;
+  left: 6vw;
+  min-width: 350px;
+}
+
+#app-mockup {
+  max-width: 750px;
+  position: absolute;
+  right: 8vw;
+  top: 180px;
+}
+
+#full-moon {
+  max-width: 450px;
+  position: absolute;
+  bottom: 10px;
+  left: -130px;
+}
+
+.project-section {
+  position: relative;
+  min-height: 80vh;
+  padding-top: 40px;
+  color: black;
+}
+
+.project-section-text {
+  position: absolute;
+  left: 6vw;
+
+  h2 {
+    font-family: "Playfair Display";
+    font-size: 24px;
+  }
+
+  p {
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 100;
+    max-width: 350px;
+  }
+}
+
+.project-mockup-container {
+  position: absolute;
+  display: flex;
+  right: 3vw;
+  align-items: flex-start;
+
+  img {
+    max-width: 340px;
+    position: relative;
+
+    &.alto-80 {
+      top: -80px;
+    }
+    &.basso-80 {
+      top: 80px;
+    }
+  }
+}
+
+.section-lunga {
+  min-height: 120vh;
+}
+
+.section-media {
+  min-height: 100vh;
+}
+
+.project-footer {
+  background-color: #000;
+  padding-bottom: 360px;
+
+  min-height: 120vh;
+  .project-section {
+    color: #fff;
+  }
+  .project-mockup-container {
+    left: 20vw;
+    top: 160px;
+    right: 20vw;
+    justify-content: space-between;
+  }
+
+  #app-light {
+    min-width: 440px;
+    position: relative;
+    top: -80px;
+  }
+
+  .thank-you {
+    h2 {
+      text-align: center;
+      font-size: 44px;
+    }
+    p {
+      text-align: center;
+      font-size: 15px;
+      font-family: var(--base-font-family);
+    }
   }
 }

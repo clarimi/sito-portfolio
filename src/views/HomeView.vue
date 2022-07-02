@@ -6,9 +6,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 <template>
   <main>
     <header>
-      <a href="/" id="site-logo">
+      <router-link :to="'/'" id="site-logo">
         <img src="./../assets/c_logo.svg" />
-      </a>
+      </router-link>
       <div class="social-links">
         <a><span>Behance</span></a>
         <a><span>LinkedIn</span></a>
@@ -38,8 +38,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
         <div class="panel-content">
           <img id="person" src="./../assets/person.png" />
           <div>
-            <h1>A few words <span class="bodoni-italic">about me</span></h1>
-            <p>Hi I’m Clarice e mo ti becchi sto pezzo di paragrafo di minchiate about me, consectetur adipiscing elit
+            <h1 class="few-words">A few words <span class="about-me bodoni-italic">about me</span></h1>
+            <p class="presentation-paragraph">Hi I’m Clarice e mo ti becchi sto pezzo di paragrafo di minchiate about
+              me, consectetur adipiscing elit
               ut
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non
               enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim
@@ -71,19 +72,29 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
               <ol class="skill-list">
                 <li>
                   <h2>Marketing</h2>
-                  <p>Social media marketing ∙ Blockchain and NFT ∙ Content creation ∙ Advertising ∙ Google Analytics</p>
+                  <p class="marketing-list"><span class="social-mm">Social media marketing</span> ∙ <span
+                      class="blockchain">Blockchain and
+                      NFT</span> ∙ <span class="content-c">Content creation</span> ∙ <span
+                      class="adv">Advertising</span> ∙ <span class="google-a">Google Analytics</span></p>
                 </li>
                 <li>
                   <h2>Digital Design</h2>
-                  <p>Art Direction ∙ UX and UI</p>
+                  <p><span class="art-d">Art Direction</span> ∙ <span class="ux-ui">UX and UI</span></p>
                 </li>
                 <li>
                   <h2>Visual Design</h2>
-                  <p>Illustration ∙ Motion Graphic ∙ Editing and Video making ∙ Sound design</p>
+                  <p><span class="illustration">Illustration</span> ∙ <span class="motion">Motion Graphic</span> ∙ <span
+                      class="editing">Editing and Video making</span> ∙
+                    <span class="sound">Sound design</span>
+                  </p>
                 </li>
                 <li>
                   <h2>Creative Developer</h2>
-                  <p>Html ∙ Javascript ∙ CSS ∙ Wordpress ∙ Gatsby ∙ React.js ∙ Vue.js</p>
+                  <p><span class="html">Html</span> ∙ <span class="js">Javascript</span> ∙ <span class="css">CSS</span>
+                    ∙ <span class="wp">Wordpress</span> ∙
+                    <span class="gatsby">Gatsby</span> ∙ <span class="react">React.js</span> ∙ <span
+                      class="vue">Vue.js</span>
+                  </p>
                 </li>
               </ol>
             </div>
@@ -155,11 +166,22 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
       </section>
       <section class="panel" id="projects-panel">
         <div class="panel-content">
-          <h1>Projects <span class="bodoni-italic">Projects</span> Projects</h1>
+          <h1> <span class="project-1">Projects</span> <span class="project-2">Projects</span> <span
+              class="project-3">Projects</span></h1>
           <div class="projects-list">
             <div class="project">
               <img src="./../assets/immagini-progetti/lustro.png" />
-              <h3>Astrology App</h3>
+              <h3 class="project-title">Astrology App</h3>
+              <div class="project-tags">
+                <div>UI | UX design</div>
+                <div>Pippo</div>
+                <div>Pluto</div>
+              </div>
+              <router-link :to="'/progetto/lustro'">Vai al progetto</router-link>
+            </div>
+            <div class="project">
+              <img src="./../assets/immagini-progetti/lustro.png" />
+              <h3 class="project-title">Astrology App</h3>
               <div class="project-tags">
                 <div>UI | UX design</div>
                 <div>Pippo</div>
@@ -168,16 +190,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
             </div>
             <div class="project">
               <img src="./../assets/immagini-progetti/lustro.png" />
-              <h3>Astrology App</h3>
-              <div class="project-tags">
-                <div>UI | UX design</div>
-                <div>Pippo</div>
-                <div>Pluto</div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="./../assets/immagini-progetti/lustro.png" />
-              <h3>Astrology App</h3>
+              <h3 class="project-title">Astrology App</h3>
               <div class="project-tags">
                 <div>UI | UX design</div>
                 <div>Pippo</div>
@@ -189,9 +202,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
       </section>
       <section class="panel" id="design-cit-panel">
         <div class="panel-content">
-          <h1><span class="bodoni">Design</span> won’t save the world
+          <h1 class="wont-save"><span class="bodoni">Design</span> won’t save the world
             but makes it look good, <span class="bodoni">maybe</span></h1>
-          <p>My biggest belief is / achievement for the future is.... purus sit amet luctus venenatis, lectus magna
+          <p class="cit-paragraph">My biggest belief is / achievement for the future is.... purus sit amet luctus
+            venenatis, lectus magna
             fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est
             ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui faucibus
             in ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit amet massa vitae tortor
@@ -248,11 +262,12 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
-
+  scrollTween: null,
   mounted() {
+    let self = this;
     gsap.registerPlugin(ScrollTrigger);
 
-    let scrollTween = gsap.to(".panel:not(:last-child)", {
+    this.scrollTween = gsap.to(".panel:not(:last-child)", {
       xPercent: -100,
       ease: "none",
       stagger: 0.5,
@@ -267,35 +282,21 @@ export default {
       }
     });
 
-    gsap.to(".dsada:nth-child(3)", {
-      xPercent: -100,
-      ease: "none",
-      stagger: 0.5,
-      scrollTrigger: {
-        trigger: ".container",
-        start: (n) => { console.log(n); return 4000; },
-        end: (n) => { console.log(n); return 6000; },
-        // markers: true,
-        scrub: true,
-        pin: true,
-        id: "animazione-panel"
-      }
-    });
+    // this.scrollTween.scrollTrigger.scroll(0);
 
     const liItems = 4;
 
     for (var i = 0; i < liItems; i++) {
-
       gsap.from(`#skill-panel ol > li:nth-child(${i + 1})`, {
         x: 800 + (400 * i),
         scrollTrigger: {
           trigger: "#descrizione-panel",
-          containerAnimation: scrollTween,
+          containerAnimation: this.scrollTween,
           start: "right 82%",
           end: "center 10%",
           scrub: true,
-          //markers: true,
-          toggleActions: "play none none reset",
+          markers: true,
+          toggleActions: "play none revert reset",
           id: "skill-1",
         }
       });
@@ -303,17 +304,16 @@ export default {
 
 
     for (var i = 0; i < 3; i++) {
-
       gsap.from(`#software-panel ol > li:nth-child(${i + 1})`, {
-        x: 800 + (400 * i),
+        x: 1500 + (400 * i),
         scrollTrigger: {
           trigger: "#skill-panel",
-          containerAnimation: scrollTween,
+          containerAnimation: this.scrollTween,
           start: "right 60%",
           end: "right center",
           scrub: true,
-          //markers: true,
-          toggleActions: "play none none reset",
+          markers: true,
+          toggleActions: "play none revert reset",
           id: "sw-1",
         }
       });
@@ -323,7 +323,7 @@ export default {
       opacity: 0,
       scrollTrigger: {
         trigger: "#skill-panel",
-        containerAnimation: scrollTween,
+        containerAnimation: this.scrollTween,
         start: "right 68%",
         end: "right 65%",
         scrub: true,
@@ -338,7 +338,7 @@ export default {
       opacity: 1,
       scrollTrigger: {
         trigger: "#skill-panel",
-        containerAnimation: scrollTween,
+        containerAnimation: this.scrollTween,
         start: "right 68%",
         end: "right 67%",
         scrub: true,
@@ -352,7 +352,7 @@ export default {
       opacity: 0,
       scrollTrigger: {
         trigger: "#skill-panel",
-        containerAnimation: scrollTween,
+        containerAnimation: this.scrollTween,
         start: "right 48%",
         end: "right 45%",
         scrub: true,
@@ -361,6 +361,14 @@ export default {
         id: "title-nascondi-1",
       }
     });
+
+    setTimeout(function () {
+      self.scrollTween.scrollTrigger.refresh()
+    }, 10);
+  },
+
+  unmounted() {
+    ScrollTrigger.refresh();
   }
 }
 

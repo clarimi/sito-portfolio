@@ -1,18 +1,28 @@
 <script setup>
 import TheWelcome from '@/components/TheWelcome.vue';
-import gsap from 'gsap';
+import { gsap, Power0 } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 </script>
 <template>
   <main>
+
+    <div id="preloader">
+      <div class="logo-loader">
+        <img src="./../assets/logo-loader.svg" />
+        <div id="loading-bar">
+          <div id="loading-bar-interna"></div>
+        </div>
+      </div>
+    </div>
+
     <header>
       <router-link :to="'/'" id="site-logo">
         <img src="./../assets/c_logo.svg" />
       </router-link>
       <div class="social-links">
-        <a><span>Behance</span></a>
-        <a><span>LinkedIn</span></a>
-        <a><span>Contact</span></a>
+        <a href="https://www.behance.net/claricemirandola1" class="link-behance"><span>Behance</span></a>
+        <a href="https://www.linkedin.com/in/claricemirandola/" class="link-linkedin"><span>LinkedIn</span></a>
+        <a @click="vaiInFondo"><span>Contact</span></a>
       </div>
     </header>
     <div class="container">
@@ -93,21 +103,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
               <ol class="software-list">
                 <li>
                   <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
+                    <img src="./../assets/icone-software/illustrator.png" />Illustrator
                   </div>
                   <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
-                  </div>
-                  <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
-                  </div>
-                </li>
-                <li>
-                  <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
-                  </div>
-                  <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
+                    <img src="./../assets/icone-software/photoshop.png" />Photoshop
                   </div>
                   <div class="software">
                     <img src="./../assets/icone-software/after.png" />After effects
@@ -115,24 +114,35 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
                 </li>
                 <li>
                   <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
+                    <img src="./../assets/icone-software/lightroom.png" />Lightroom
                   </div>
                   <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
+                    <img src="./../assets/icone-software/premiere.png" />Premiere Pro
                   </div>
                   <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
+                    <img src="./../assets/icone-software/indesign.png" />InDesign
                   </div>
                 </li>
                 <li>
                   <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
+                    <img src="./../assets/icone-software/figma.png" />Figma
                   </div>
                   <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
+                    <img src="./../assets/icone-software/xd.png" />Adobe XD
                   </div>
                   <div class="software">
-                    <img src="./../assets/icone-software/after.png" />After effects
+                    <img src="./../assets/icone-software/protopie.png" />Protopie
+                  </div>
+                </li>
+                <li>
+                  <div class="software">
+                    <img src="./../assets/icone-software/logic.png" />Logic Pro
+                  </div>
+                  <div class="software">
+                    <img src="./../assets/icone-software/github.png" />GitHub
+                  </div>
+                  <div class="software">
+                    <img src="./../assets/icone-software/vsc.png" />Visual Studio Code
                   </div>
                 </li>
               </ol>
@@ -153,49 +163,50 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
               class="project-3">Projects</span></h1>
           <div class="projects-list">
             <div class="project">
-              <img src="./../assets/immagini-progetti/lustro.png" />
-              <h3 class="project-title">Astrology App</h3>
+              <img src="./../assets/immagini-progetti/progetto-veroneser.png" />
+              <h3 class="project-title">The Veroneser</h3>
               <div class="project-tags">
-                <div>UI | UX design</div>
-                <div>Pippo</div>
-                <div>Pluto</div>
+                <div>Master`s Degree Thesis</div>
+                <div>Art Direction</div>
+                <div>2022</div>
               </div>
-              <router-link :to="'/progetto/lustro'">Vai al progetto</router-link>
+
             </div>
             <div class="project">
               <img src="./../assets/immagini-progetti/lustro.png" />
               <h3 class="project-title">Astrology App</h3>
               <div class="project-tags">
-                <div>UI | UX design</div>
-                <div>Pippo</div>
-                <div>Pluto</div>
+                <div>UI | UX Design</div>
+                <div>Prototype</div>
+                <div>2021 / 2022</div>
+              </div>
+              <router-link :to="'/progetto/lustro'" class="button-project-lustro">Vai al progetto</router-link>
+            </div>
+            <div class="project">
+              <img src="./../assets/immagini-progetti/fondazione-negri.png" />
+              <h3 class="project-title">Fondazione Negri Website</h3>
+              <div class="project-tags">
+                <div>Web Design</div>
+                <div>2020 / 2021</div>
+
               </div>
             </div>
             <div class="project">
               <img src="./../assets/immagini-progetti/lustro.png" />
-              <h3 class="project-title">Astrology App</h3>
+              <h3 class="project-title">Alte Repeto - Inonda</h3>
               <div class="project-tags">
-                <div>UI | UX design</div>
-                <div>Pippo</div>
-                <div>Pluto</div>
+                <div>Bachelor Degree Thesis</div>
+                <div>Interior Design</div>
+                <div>2018 / 2019</div>
               </div>
             </div>
             <div class="project">
               <img src="./../assets/immagini-progetti/lustro.png" />
-              <h3 class="project-title">Astrology App</h3>
+              <h3 class="project-title">Progetto Vuoto</h3>
               <div class="project-tags">
-                <div>UI | UX design</div>
-                <div>Pippo</div>
-                <div>Pluto</div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="./../assets/immagini-progetti/lustro.png" />
-              <h3 class="project-title">Astrology App</h3>
-              <div class="project-tags">
-                <div>UI | UX design</div>
-                <div>Pippo</div>
-                <div>Pluto</div>
+                <div>Categoria</div>
+                <div>Categoria</div>
+                <div>Anno / Anno</div>
               </div>
             </div>
           </div>
@@ -262,10 +273,31 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+function animaPreloader() {
+
+  var tl = gsap.timeline();
+  tl.to("#loading-bar-interna", { width: Math.random() * 40, duration: 0.4, ease: Power0.easeInOut });
+  tl.to("#loading-bar-interna", { width: Math.random() * 40 + 40, duration: 0.2, delay: Math.random() * 0.5, ease: Power0.easeInOut });
+  tl.to("#loading-bar-interna", { width: Math.random() * 40 + 80, duration: 0.3, delay: Math.random() * 0.5, ease: Power0.easeInOut });
+  tl.to("#loading-bar-interna", { width: 140, duration: 0.2, delay: Math.random() * 0.5, ease: Power0.easeInOut });
+  tl.to("#preloader", { opacity: 0, duration: 0.8, onComplete: () => { gsap.set("#preloader", { display: "none" }) }, ease: Power0.easeInOut });
+  tl.from("#hero-logo", { x: 30, opacity: 0, duration: 0.4, delay: 0.2, ease: Power0.easeOut });
+  tl.from("header, #hero-scroll-text", { opacity: 0, duration: 0.2, delay: 0.2, ease: Power0.easeOut })
+};
+
+
+function vaiInFondo() {
+  window.scrollTo(12000, 130000);
+};
+
 export default {
   scrollTween: null,
   mounted() {
     let self = this;
+    animaPreloader();
+
+
+
     gsap.registerPlugin(ScrollTrigger);
 
     this.scrollTween = gsap.to(".panel:not(:last-child)", {

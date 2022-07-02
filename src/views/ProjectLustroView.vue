@@ -40,7 +40,9 @@
 
             <section class="project-section section-lunga">
                 <div class="project-section-text">
-                    <h2>First Step</h2>
+                    <h2>Calculating
+                        <br />the natal chart
+                    </h2>
 
                 </div>
                 <div class="project-mockup-container">
@@ -52,9 +54,8 @@
 
             <section class="project-section section-media">
                 <div class="project-section-text">
-                    <h2>First Step</h2>
-                    <p>You will find walkthrough screens that explain the main features of the app.
-                        Then complete input fields with your personal data to find out your natal chart.</p>
+                    <h2>Add friends</h2>
+                    <p>Add yours friends and see your astrological compatibility</p>
                 </div>
                 <div class="project-mockup-container">
                     <img id="aggiungi-amici" class="basso-80" src="./../assets/aggiungi-amici.png" />
@@ -65,9 +66,8 @@
 
             <section class="project-section section-media">
                 <div class="project-section-text">
-                    <h2>First Step</h2>
-                    <p>You will find walkthrough screens that explain the main features of the app.
-                        Then complete input fields with your personal data to find out your natal chart.</p>
+                    <h2>Discover section</h2>
+                    <p>Discover the characteristics of the zodiac signs, planets and astrological houses.</p>
                 </div>
                 <div class="project-mockup-container">
                     <img id="scopri-segni" class="basso-80" src="./../assets/scopri-segni.png" />
@@ -84,11 +84,14 @@
                     <div class="project-mockup-container">
                         <img id="scopri-segni-light" src="./../assets/scopri-segni-light.png" />
                         <img id="app-light" src="./../assets/app-light.png" />
+
                     </div>
                 </section>
                 <div class="thank-you">
-                    <h2>Thank you for watching!</h2>
+                    <img id="thank-you-img" src="./../assets/thank-you.svg" />
                     <p>You can find this project on <strong>Behance</strong></p>
+                    <img id="project-logo-footer" src="./../assets/logo-nobg.png" />
+
                 </div>
             </div>
         </div>

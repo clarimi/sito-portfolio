@@ -1,3 +1,7 @@
+<script setup>
+import { gsap, Power0 } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+</script>
 <template>
     <main>
         <header>
@@ -26,7 +30,7 @@
                 <img id="full-moon" src="./../assets/full-moon.png" />
             </section>
 
-            <section class="project-section">
+            <section class="project-section" id="section-1">
                 <div class="project-section-text">
                     <h2>First Step</h2>
                     <p>You will find walkthrough screens that explain the main features of the app.
@@ -38,7 +42,7 @@
                 </div>
             </section>
 
-            <section class="project-section section-lunga">
+            <section class="project-section section-lunga" id="section-2">
                 <div class="project-section-text">
                     <h2>Calculating
                         <br />the natal chart
@@ -52,7 +56,7 @@
                 </div>
             </section>
 
-            <section class="project-section section-media">
+            <section class="project-section section-media" id="section-3">
                 <div class="project-section-text">
                     <h2>Add friends</h2>
                     <p>Add yours friends and see your astrological compatibility</p>
@@ -64,7 +68,7 @@
                 </div>
             </section>
 
-            <section class="project-section section-media">
+            <section class="project-section section-media" id="section-4">
                 <div class="project-section-text">
                     <h2>Discover section</h2>
                     <p>Discover the characteristics of the zodiac signs, planets and astrological houses.</p>
@@ -76,7 +80,7 @@
                 </div>
             </section>
             <div class="project-footer">
-                <section class="project-section section-media">
+                <section class="project-section section-media" id="section-5">
                     <div class="project-section-text">
                         <h2>Light theme</h2>
                         <p>From your profile settings you can switch to light theme whenever you want to.</p>
@@ -108,3 +112,93 @@
     }
 }
 </style>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+    mounted() {
+
+        const tl = gsap.timeline();
+        tl.from("#project-title", {
+            opacity: 0,
+            y: 20,
+            duration: 0.4,
+            delay: 0.5,
+            ease: Power0.easeOut
+        });
+
+        tl.from("#app-mockup", {
+            opacity: 0,
+            y: 20,
+            duration: 0.4,
+            ease: Power0.easeOut
+        }, "<+=50%");
+
+        tl.from(".project-intro", {
+            opacity: 0,
+            y: 20,
+            duration: 0.4,
+            ease: Power0.easeOut
+        }, "<+=50%");
+
+        const durataAnimaMockup = 1;
+        const startAnimaMockup = "top 40%";
+
+        gsap.from("#splash, #dati", {
+            opacity: 0,
+            y: 20,
+            duration: durataAnimaMockup,
+            scrollTrigger: {
+                trigger: "#section-1",
+                start: startAnimaMockup,
+                //markers: true,
+            }
+        });
+
+        gsap.from("#caricamento, #home, #profilo", {
+            opacity: 0,
+            y: 20,
+            duration: durataAnimaMockup,
+            scrollTrigger: {
+                trigger: "#section-2",
+                start: startAnimaMockup,
+                //markers: true,
+            }
+        });
+
+        gsap.from("#section-3 img", {
+            opacity: 0,
+            y: 20,
+            duration: durataAnimaMockup,
+            scrollTrigger: {
+                trigger: "#section-3",
+                start: startAnimaMockup,
+                // markers: true,
+            }
+        });
+
+        gsap.from("#section-4 img", {
+            opacity: 0,
+            y: 20,
+            duration: durataAnimaMockup,
+            scrollTrigger: {
+                trigger: "#section-4",
+                start: startAnimaMockup,
+                //markers: true,
+            }
+        });
+
+        gsap.from("#section-5 img", {
+            opacity: 0,
+            y: 20,
+            duration: durataAnimaMockup,
+            scrollTrigger: {
+                trigger: "#section-5",
+                start: startAnimaMockup,
+                // markers: true,
+            }
+        });
+
+    }
+}
+</script>

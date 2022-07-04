@@ -3,9 +3,9 @@ import TheWelcome from '@/components/TheWelcome.vue';
 import { gsap, Power0 } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 </script>
+
 <template>
   <main>
-
     <div id="preloader">
       <div class="logo-loader">
         <img src="./../assets/logo-loader.svg" />
@@ -14,7 +14,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
         </div>
       </div>
     </div>
-
     <header>
       <router-link :to="'/'" id="site-logo">
         <img src="./../assets/c_logo.svg" />
@@ -53,12 +52,12 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
       </div>
       <section class="panel panel-falso" id="pannello-falso-1">
         <div class="panel-content">
-          Pannello falzo
+          Pannello falso
         </div>
       </section>
       <section class="panel panel-falso" id="pannello-falso-2">
         <div class="panel-content">
-          Pannello falzo
+          Pannello falso
         </div>
       </section>
       <section class="panel" id="skill-panel">
@@ -282,7 +281,7 @@ function animaPreloader() {
   tl.to("#loading-bar-interna", { width: 140, duration: 0.2, delay: Math.random() * 0.5, ease: Power0.easeInOut });
   tl.to("#preloader", { opacity: 0, duration: 0.8, onComplete: () => { gsap.set("#preloader", { display: "none" }) }, ease: Power0.easeInOut });
   tl.from("#hero-logo", { x: 30, opacity: 0, duration: 0.4, delay: 0.2, ease: Power0.easeOut });
-  tl.from("header, #hero-scroll-text", { opacity: 0, duration: 0.2, delay: 0.2, ease: Power0.easeOut })
+  tl.from("header, #hero-scroll-text", { opacity: 0, duration: 0.2, delay: 0.2, ease: Power0.easeOut });
 };
 
 
@@ -293,12 +292,9 @@ function vaiInFondo() {
 export default {
   scrollTween: null,
   mounted() {
+
     let self = this;
     animaPreloader();
-
-
-
-    gsap.registerPlugin(ScrollTrigger);
 
     this.scrollTween = gsap.to(".panel:not(:last-child)", {
       xPercent: -100,
@@ -315,7 +311,6 @@ export default {
       }
     });
 
-    // this.scrollTween.scrollTrigger.scroll(0);
 
     const liItems = 4;
 
@@ -368,6 +363,7 @@ export default {
       }
     });
 
+    // Animazione per rallentare la lista dei software 
     gsap.from(".software-list", {
       x: -400,
       scrollTrigger: {
@@ -399,7 +395,7 @@ export default {
 
 
     setTimeout(function () {
-      self.scrollTween.scrollTrigger.refresh()
+      self.scrollTween.scrollTrigger.refresh();
     }, 10);
   },
 

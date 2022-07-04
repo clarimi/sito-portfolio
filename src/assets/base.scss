@@ -9,8 +9,8 @@
 body {
   overflow-x: hidden;
   overflow-y: scroll;
-  background-color: #222;
-  color: #ddd;
+  background-color: #000;
+  color: #fff;
   font-size: 18px;
   line-height: 1.4;
   font-weight: 300;
@@ -323,6 +323,7 @@ body {
 .something {
   font-family: "Bodoni Moda", "Bodoni", serif;
   font-style: italic;
+  font-weight: 500;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
   font-size: 95px;
@@ -483,28 +484,6 @@ header {
 .bodoni-extrabold {
   font-family: var(--bodoni-font-family);
   font-weight: 800;
-}
-
-.titolo-hard-skills-falso {
-  display: none !important;
-  position: fixed;
-  z-index: 7;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  div {
-    position: relative;
-    left: 72px;
-    top: 16px;
-  }
-  .skill-software-list {
-    opacity: 0;
-  }
-  h1 {
-    font-size: 100px;
-    color: black;
-  }
 }
 
 .few-words {
